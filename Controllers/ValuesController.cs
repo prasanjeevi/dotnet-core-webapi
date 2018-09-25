@@ -14,8 +14,12 @@ namespace dotnet_core_webapi.Controllers
 
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<string>> Get([FromQuery] string q)
         {
+            if(!string.IsNullOrEmpty(q))
+            {
+                return values.Where(value => value.Contains(q, StringComparison.InvariantCultureIgnoreCase)).ToList();
+            }
             return values;
         }
 
