@@ -40,6 +40,12 @@ namespace dotnet_core_webapi.Controllers
             values[id] = value;
         }
 
+        [HttpPatch("{id}")]
+        public void Patch(int id, [FromBody] string value)
+        {
+            values[id] = "patch:" + value;
+        }
+
         // DELETE api/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)
