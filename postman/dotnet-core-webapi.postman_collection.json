@@ -33,7 +33,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:5000/api/values",
+					"raw": "http://localhost:5000/api/values?q=e",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -42,6 +42,12 @@
 					"path": [
 						"api",
 						"values"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "e"
+						}
 					]
 				}
 			},
@@ -130,7 +136,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/api/values/1 Copy",
+			"name": "http://localhost:5000/api/values/1",
 			"request": {
 				"method": "PATCH",
 				"header": [
@@ -169,10 +175,7 @@
 						"value": "application/json"
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": "\"hello\""
-				},
+				"body": {},
 				"url": {
 					"raw": "http://localhost:5000/api/values/1",
 					"protocol": "http",
