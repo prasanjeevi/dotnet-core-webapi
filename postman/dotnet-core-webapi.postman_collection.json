@@ -27,6 +27,27 @@
 			"response": []
 		},
 		{
+			"name": "http://localhost:5000/api/values?q",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/api/values",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"values"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "http://localhost:5000/api/values/1",
 			"request": {
 				"method": "GET",
@@ -109,6 +130,36 @@
 			"response": []
 		},
 		{
+			"name": "http://localhost:5000/api/values/1 Copy",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"hello\""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/values/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"values",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "http://localhost:5000/api/values/",
 			"request": {
 				"method": "DELETE",
@@ -133,6 +184,39 @@
 						"api",
 						"values",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcm5hbWU6cGFzc3dvcmQ="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"hello\""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth"
 					]
 				}
 			},
